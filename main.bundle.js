@@ -53,7 +53,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'Welcome To Parsen Homes';
+        this.title = 'appkjhgjhgv works!';
     }
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
@@ -136,14 +136,14 @@ var environment = {
 /***/ 609:
 /***/ (function(module, exports) {
 
-module.exports = ".div1\r\n{\r\n   font-family: 'Times New Roman', Times, serif;\r\n   font-size: xx-large;\r\n   color: brown;\r\n   margin-left: 50px;\r\n   margin-top: 60px;\r\n   \r\n\r\n}\r\n\r\n.img1\r\n{\r\n    width: 100%;\r\n    height:560px;\r\n    \r\n}\r\n\r\n.b0\r\n{\r\n    margin-left: 640px;\r\n    margin-bottom: 20px;\r\n    float: left;\r\n    width: 120px;\r\n    height: 40px;\r\n}\r\n\r\n.b1\r\n{\r\n    margin-left: 40px;\r\n    margin-bottom: 20px;\r\n    float: left;\r\n    width: 120px;\r\n    height: 40px;\r\n}\r\n\r\n.b2\r\n{\r\n    margin-left: 40px;\r\n    margin-bottom: 20px;\r\n    float: left;\r\n    width: 120px;\r\n    height: 40px;\r\n}"
+module.exports = ""
 
 /***/ }),
 
 /***/ 610:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"div1\">\n  Parsen Homes\n</div>\n<div>\n  <button class=\"btn-primary b0\">Home</button>\n  <button class=\"btn-success b1\">Projects</button>\n  <button class=\"btn-danger b2\">About</button>\n</div>\n\n<div >\n  <!-- <img class=\"img1\" src=\"../assets/img/i1.jpg\" >  -->\n</div>\n\n<div>\n  <p>\n    jjjjjjjjjjjjjjjjj\n  </p>\n</div>"
+module.exports = "<h1>\n  {{title}}\n</h1>\n"
 
 /***/ }),
 
