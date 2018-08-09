@@ -136,14 +136,14 @@ var environment = {
 /***/ 609:
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".btn1\r\n{\r\n    margin-left: 920px;\r\n    width: 80px;\r\n}\r\n\r\n.btn2\r\n{\r\n    margin-left: 30px;\r\n    width: 80px;\r\n}\r\n\r\n.btn3\r\n{\r\n    margin-left: 30px;\r\n    width: 80px;\r\n}\r\n\r\n.div1\r\n{\r\n    width: 90%;\r\n    height: 120px;\r\n}"
 
 /***/ }),
 
 /***/ 610:
 /***/ (function(module, exports) {
 
-module.exports = "<h1>\n  {{title}}\n</h1>\n"
+module.exports = "\n<div>\n\n</div>\n<img class=\"div1\" src=\"assets/i1.jpg\">\n\n\n<nav class=\"navbar navbar-inverse\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-header\">\n      <a class=\"navbar-brand\" href=\"#\">Parsen Homes</a>\n    </div>\n    <button class=\"btn btn-success navbar-btn btn1\">Home</button>\n    <button class=\"btn btn-danger navbar-btn btn2\">Projects</button>\n    <button class=\"btn btn-primary navbar-btn btn3\">About</button>\n  </div>\n</nav>"
 
 /***/ }),
 
