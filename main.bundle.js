@@ -54,7 +54,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Parsen Homes';
+        this.showHome = true;
+        this.showProjects = false;
+        this.showAbout = false;
+        this.jj = function f1() {
+            this.title = "etryrtydfsd";
+        };
+        this.title = 'Welcome to PARSEN HOMES';
     }
+    AppComponent.prototype.OnHomeClicked = function (output) {
+        this.showHome = true;
+        this.showProjects = false;
+        this.showAbout = false;
+    };
+    AppComponent.prototype.OnProjectsClicked = function (output) {
+        this.showHome = false;
+        this.showProjects = true;
+        this.showAbout = false;
+    };
+    AppComponent.prototype.OnAboutClicked = function (output) {
+        this.showHome = false;
+        this.showProjects = false;
+        this.showAbout = true;
+    };
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-root',
@@ -136,14 +158,14 @@ var environment = {
 /***/ 609:
 /***/ (function(module, exports) {
 
-module.exports = ".btn1\r\n{\r\n    margin-left: 920px;\r\n    width: 80px;\r\n}\r\n\r\n.btn2\r\n{\r\n    margin-left: 30px;\r\n    width: 80px;\r\n}\r\n\r\n.btn3\r\n{\r\n    margin-left: 30px;\r\n    width: 80px;\r\n}\r\n\r\n.div1\r\n{\r\n    width: 90%;\r\n    height: 120px;\r\n}"
+module.exports = ".btn1\r\n{\r\n    margin-left: 920px;\r\n    width: 80px;\r\n}\r\n\r\n.btn2\r\n{\r\n    margin-left: 30px;\r\n    width: 80px;\r\n}\r\n\r\n.btn3\r\n{\r\n    margin-left: 30px;\r\n    width: 80px;\r\n}\r\n\r\n.div1\r\n{\r\n    width: 90%;\r\n    height: 120px;\r\n}\r\n\r\n.collapsible\r\n {\r\n    background-color: #777;\r\n    color: white;\r\n    cursor: pointer;\r\n    padding: 18px;\r\n    width: 100%;\r\n    border: none;\r\n    text-align: left;\r\n    outline: none;\r\n    font-size: 15px;\r\n}"
 
 /***/ }),
 
 /***/ 610:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div>\n\n</div>\n<img class=\"div1\" src=\"assets/i1.jpg\">\n\n\n<nav class=\"navbar navbar-inverse\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-header\">\n      <a class=\"navbar-brand\" href=\"#\">Parsen Homes</a>\n    </div>\n    <button class=\"btn btn-success navbar-btn btn1\">Home</button>\n    <button class=\"btn btn-danger navbar-btn btn2\">Projects</button>\n    <button class=\"btn btn-primary navbar-btn btn3\">About</button>\n  </div>\n</nav>"
+module.exports = "\n<div>\n\n</div>\n<!-- <img class=\"div1\" src=\"assets/i1.jpg\"> -->\n<img ng-src=\"assets/i1.jpg\"/>\n\n<nav class=\"navbar navbar-inverse\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-header\">\n      <a class=\"navbar-brand\" href=\"#\">Parsen Homes</a>\n    </div>\n    <button class=\"btn btn-success navbar-btn btn1\" (click)=\"OnHomeClicked(o)\">Home</button>\n    <button class=\"btn btn-danger navbar-btn btn2\" (click)=\"OnProjectsClicked(o)\">Projects</button>\n    <button class=\"btn btn-primary navbar-btn btn3\" (click)=\"OnAboutClicked(o)\">About</button>\n  </div>\n</nav>\n\n\n\n\n<div *ngIf=\"showHome\">\n  \n  HOME\n  \n</div>\n\n<div *ngIf=\"showProjects\">\n  \n    PROJECT\n    \n  </div>\n\n  <div *ngIf=\"showAbout\">\n  \n      ABOUT\n      \n    </div>\n\n"
 
 /***/ }),
 
