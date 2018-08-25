@@ -158,7 +158,7 @@ var environment = {
 /***/ 609:
 /***/ (function(module, exports) {
 
-module.exports = ".btn1\r\n{\r\n    margin-left: 920px;\r\n    width: 80px;\r\n}\r\n\r\n.btn2\r\n{\r\n    margin-left: 30px;\r\n    width: 80px;\r\n}\r\n\r\n.btn3\r\n{\r\n    margin-left: 30px;\r\n    width: 80px;\r\n}\r\n\r\n.div1\r\n{\r\n    width: 90%;\r\n    height: 120px;\r\n}\r\n\r\n.collapsible\r\n {\r\n    background-color: #777;\r\n    color: white;\r\n    cursor: pointer;\r\n    padding: 18px;\r\n    width: 100%;\r\n    border: none;\r\n    text-align: left;\r\n    outline: none;\r\n    font-size: 15px;\r\n}"
+module.exports = ".btn1\r\n{\r\n    margin-left: 60%;\r\n    margin-right: auto;\r\n    width: 80px;\r\n}\r\n\r\n.btn2\r\n{\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    width: 80px;\r\n}\r\n\r\n.btn3\r\n{\r\n    margin-left:auto;\r\n    margin-right: auto;\r\n    width: 80px;\r\n}\r\n\r\n.div1\r\n{\r\n    width: 90%;\r\n    height: 120px;\r\n}\r\n\r\n.collapsible\r\n {\r\n    background-color: #777;\r\n    color: white;\r\n    cursor: pointer;\r\n    padding: 18px;\r\n    width: 100%;\r\n    border: none;\r\n    text-align: left;\r\n    outline: none;\r\n    font-size: 15px;\r\n}"
 
 /***/ }),
 
