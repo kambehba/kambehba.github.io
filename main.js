@@ -100,6 +100,7 @@ var AppComponent = /** @class */ (function () {
         });
         this.date = new Date().toDateString();
     };
+    //kghhyjgfhjfhjfj
     AppComponent.prototype.OnHomeClicked = function () {
         this.showHome = true;
         this.showProjects = false;
