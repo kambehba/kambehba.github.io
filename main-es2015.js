@@ -82,9 +82,12 @@ let OutputsService = class OutputsService {
         this.qq = [];
         this.output1Status = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
         //this.output = new Output('','OFF')  
+        this.LOCAL_URL = 'http://localhost:3000';
+        this.DEPLOYED_URL = 'https://ipc2-server.herokuapp.com';
     }
     getOutputs() {
-        this.outputs = this.http.get('http://localhost:3000/api/outputs');
+        //this.outputs = this.http.get<Output[]>('http://localhost:3000/api/outputs');
+        this.outputs = this.http.get(this.DEPLOYED_URL + '/api/outputs');
     }
     getOutPut(output) {
         const body = JSON.stringify(output);
@@ -94,22 +97,24 @@ let OutputsService = class OutputsService {
                 'Content-Type': 'application/json',
             })
         };
-        this.http.get('http://localhost:3000/api/output/' + output.Id).subscribe(data => {
+        // this.http.get<Output>('http://localhost:3000/api/output/'+ output.Id).subscribe(data=>{
+        //   this.output1Status.next(data.status);
+        //   console.log('mmmmm'+data.status);
+        // });
+        this.http.get(this.DEPLOYED_URL + '/api/output/' + output.Id).subscribe(data => {
             this.output1Status.next(data.status);
-            console.log('mmmmm' + data.status);
         });
     }
     updateOutput(output) {
-        console.log('**************1');
         const body = JSON.stringify(output);
         var prams = body;
-        console.log(prams);
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
                 'Content-Type': 'application/json',
             })
         };
-        return this.http.post('http://localhost:3000/api/outputs', prams, httpOptions);
+        //return this.http.post<Output>('http://localhost:3000/api/outputs',prams,httpOptions);
+        return this.http.post(this.DEPLOYED_URL + '/api/outputs', prams, httpOptions);
         //       .map(this.extractData)
         //       .catch(this.handleErrorObservable);
         //const body = JSON.stringify({var1:'test1',var2:'test2'});
@@ -123,22 +128,19 @@ let OutputsService = class OutputsService {
         // .catch(this.handleErrorObservable);
     }
     updateOutput2(output) {
-        console.log('**************1');
         const body = JSON.stringify(output);
         var prams = body;
-        console.log(prams);
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
                 'Content-Type': 'application/json',
             })
         };
-        console.log('/////////1');
-        this.http.post('http://localhost:3000/api/outputs', prams, httpOptions).subscribe(response => {
-            //this.output1Status.next(response.status);
-            console.log('8888888888888' + response.status);
+        // this.http.post<Output>('http://localhost:3000/api/outputs',prams,httpOptions).subscribe(response=>{
+        //   this.getOutPut(output);
+        // });
+        this.http.post(this.DEPLOYED_URL + '/api/outputs', prams, httpOptions).subscribe(response => {
             this.getOutPut(output);
         });
-        console.log('/////////2');
     }
 };
 OutputsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

@@ -86,9 +86,12 @@ var OutputsService = /** @class */ (function () {
         this.qq = [];
         this.output1Status = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
         //this.output = new Output('','OFF')  
+        this.LOCAL_URL = 'http://localhost:3000';
+        this.DEPLOYED_URL = 'https://ipc2-server.herokuapp.com';
     }
     OutputsService.prototype.getOutputs = function () {
-        this.outputs = this.http.get('http://localhost:3000/api/outputs');
+        //this.outputs = this.http.get<Output[]>('http://localhost:3000/api/outputs');
+        this.outputs = this.http.get(this.DEPLOYED_URL + '/api/outputs');
     };
     OutputsService.prototype.getOutPut = function (output) {
         var _this = this;
@@ -99,22 +102,24 @@ var OutputsService = /** @class */ (function () {
                 'Content-Type': 'application/json',
             })
         };
-        this.http.get('http://localhost:3000/api/output/' + output.Id).subscribe(function (data) {
+        // this.http.get<Output>('http://localhost:3000/api/output/'+ output.Id).subscribe(data=>{
+        //   this.output1Status.next(data.status);
+        //   console.log('mmmmm'+data.status);
+        // });
+        this.http.get(this.DEPLOYED_URL + '/api/output/' + output.Id).subscribe(function (data) {
             _this.output1Status.next(data.status);
-            console.log('mmmmm' + data.status);
         });
     };
     OutputsService.prototype.updateOutput = function (output) {
-        console.log('**************1');
         var body = JSON.stringify(output);
         var prams = body;
-        console.log(prams);
         var httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
                 'Content-Type': 'application/json',
             })
         };
-        return this.http.post('http://localhost:3000/api/outputs', prams, httpOptions);
+        //return this.http.post<Output>('http://localhost:3000/api/outputs',prams,httpOptions);
+        return this.http.post(this.DEPLOYED_URL + '/api/outputs', prams, httpOptions);
         //       .map(this.extractData)
         //       .catch(this.handleErrorObservable);
         //const body = JSON.stringify({var1:'test1',var2:'test2'});
@@ -129,22 +134,19 @@ var OutputsService = /** @class */ (function () {
     };
     OutputsService.prototype.updateOutput2 = function (output) {
         var _this = this;
-        console.log('**************1');
         var body = JSON.stringify(output);
         var prams = body;
-        console.log(prams);
         var httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
                 'Content-Type': 'application/json',
             })
         };
-        console.log('/////////1');
-        this.http.post('http://localhost:3000/api/outputs', prams, httpOptions).subscribe(function (response) {
-            //this.output1Status.next(response.status);
-            console.log('8888888888888' + response.status);
+        // this.http.post<Output>('http://localhost:3000/api/outputs',prams,httpOptions).subscribe(response=>{
+        //   this.getOutPut(output);
+        // });
+        this.http.post(this.DEPLOYED_URL + '/api/outputs', prams, httpOptions).subscribe(function (response) {
             _this.getOutPut(output);
         });
-        console.log('/////////2');
     };
     OutputsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
