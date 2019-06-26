@@ -85,7 +85,7 @@ var AppComponent = /** @class */ (function () {
     function AppComponent(siteService) {
         this.siteService = siteService;
         this.title = 'kamparsen-site';
-        this.camoziImages = ["../assets/i4.JPG", "../assets/i5.JPG", "../assets/i6.JPG", "../assets/i7.JPG", "../assets/i8.JPG", "../assets/i9.JPG",];
+        this.camoziImages = ["../assets/i4.JPG", "../assets/i5.JPG", "../assets/i6.JPG", "../assets/i7.JPG", "../assets/i8.JPG", "../assets/i9.JPG"];
         this.allMonth = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
         this.siteService.GetDateTimeInfo();
     }
@@ -101,6 +101,7 @@ var AppComponent = /** @class */ (function () {
             _this.hideAllSkills();
             _this.hideAllExperinces();
             _this.currentCamozziImageIndex = 0;
+            alert(_this.camoziImages[2]);
         });
         this.siteService.weatherModel.subscribe(function (weatherData) {
             _this.currentTemp = Math.floor(_this.ConvertKelvinToFarenhite(weatherData.main.temp));

@@ -81,7 +81,7 @@ let AppComponent = class AppComponent {
     constructor(siteService) {
         this.siteService = siteService;
         this.title = 'kamparsen-site';
-        this.camoziImages = ["../assets/i4.JPG", "../assets/i5.JPG", "../assets/i6.JPG", "../assets/i7.JPG", "../assets/i8.JPG", "../assets/i9.JPG",];
+        this.camoziImages = ["../assets/i4.JPG", "../assets/i5.JPG", "../assets/i6.JPG", "../assets/i7.JPG", "../assets/i8.JPG", "../assets/i9.JPG"];
         this.allMonth = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
         this.siteService.GetDateTimeInfo();
     }
@@ -96,6 +96,7 @@ let AppComponent = class AppComponent {
             this.hideAllSkills();
             this.hideAllExperinces();
             this.currentCamozziImageIndex = 0;
+            alert(this.camoziImages[2]);
         });
         this.siteService.weatherModel.subscribe(weatherData => {
             this.currentTemp = Math.floor(this.ConvertKelvinToFarenhite(weatherData.main.temp));
