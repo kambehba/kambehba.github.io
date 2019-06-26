@@ -81,6 +81,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var AppComponent = /** @class */ (function () {
     function AppComponent(siteService) {
         this.siteService = siteService;
@@ -91,6 +92,7 @@ var AppComponent = /** @class */ (function () {
     }
     AppComponent.prototype.ngOnInit = function () {
         var _this = this;
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
         this.siteService.timeDateModel.subscribe(function (timeData) {
             _this.currentWeekDay = timeData.dayOfTheWeek;
             _this.currentMonth = _this.allMonth[Number(timeData.currentDateTime.substring(5, 7))];

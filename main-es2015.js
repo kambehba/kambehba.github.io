@@ -77,6 +77,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 let AppComponent = class AppComponent {
     constructor(siteService) {
         this.siteService = siteService;
@@ -86,6 +87,7 @@ let AppComponent = class AppComponent {
         this.siteService.GetDateTimeInfo();
     }
     ngOnInit() {
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
         this.siteService.timeDateModel.subscribe(timeData => {
             this.currentWeekDay = timeData.dayOfTheWeek;
             this.currentMonth = this.allMonth[Number(timeData.currentDateTime.substring(5, 7))];
