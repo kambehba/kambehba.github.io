@@ -77,17 +77,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
+// import {enableProdMode} from '@angular/core';
 let AppComponent = class AppComponent {
     constructor(siteService) {
         this.siteService = siteService;
         this.title = 'kamparsen-site';
-        this.camoziImages = ["../assets/i4.JPG", "../assets/i5.JPG", "../assets/i6.JPG", "../assets/i7.JPG", "../assets/i8.JPG", "../assets/i9.JPG",];
+        this.camoziImages = ["../assets/i4.JPG", "../assets/i5.JPG", "../assets/i6.JPG", "../assets/i7.JPG", "../assets/i8.JPG", "../assets/i9.JPG"];
         this.allMonth = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
         this.siteService.GetDateTimeInfo();
     }
     ngOnInit() {
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
+        // enableProdMode();
         this.siteService.timeDateModel.subscribe(timeData => {
             this.currentWeekDay = timeData.dayOfTheWeek;
             this.currentMonth = this.allMonth[Number(timeData.currentDateTime.substring(5, 7))];
