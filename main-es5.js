@@ -85,30 +85,29 @@ var AppComponent = /** @class */ (function () {
     function AppComponent(siteService) {
         this.siteService = siteService;
         this.title = 'kamparsen-site';
+        this.camoziImages = ["../assets/i4.JPG", "../assets/i5.JPG", "../assets/i6.JPG", "../assets/i7.JPG", "../assets/i8.JPG", "../assets/i9.JPG"];
         this.allMonth = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
         this.siteService.GetDateTimeInfo();
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.camozziImage = this.camoziImages[0];
-        alert(this.camozziImage);
-        // this.siteService.timeDateModel.subscribe(timeData => {
-        //   this.currentWeekDay = timeData.dayOfTheWeek;
-        //   this.currentMonth = this.allMonth[Number(timeData.currentDateTime.substring(5, 7))];
-        //   this.currentDay = timeData.currentDateTime.substring(8, 10);
-        //   this.currentYear = timeData.currentDateTime.substring(0, 4);
-        //   this.currentTime = timeData.currentDateTime.substring(11, 16);
-        //   this.siteService.GetWeatherInfo();
-        //   this.hideAllSkills();
-        //   this.hideAllExperinces();
-        //   this.currentCamozziImageIndex = 0;
-        //   alert(this.camoziImages[2]);
-        // });
-        // this.siteService.weatherModel.subscribe(weatherData => {
-        //   this.currentTemp = Math.floor(this.ConvertKelvinToFarenhite(weatherData.main.temp));
-        // });
+        var _this = this;
+        this.currentCamozziImageIndex = 0;
+        this.siteService.timeDateModel.subscribe(function (timeData) {
+            _this.currentWeekDay = timeData.dayOfTheWeek;
+            _this.currentMonth = _this.allMonth[Number(timeData.currentDateTime.substring(5, 7))];
+            _this.currentDay = timeData.currentDateTime.substring(8, 10);
+            _this.currentYear = timeData.currentDateTime.substring(0, 4);
+            _this.currentTime = timeData.currentDateTime.substring(11, 16);
+            _this.siteService.GetWeatherInfo();
+            _this.hideAllSkills();
+            _this.hideAllExperinces();
+            _this.currentCamozziImageIndex = 0;
+            alert(_this.camoziImages[2]);
+        });
+        this.siteService.weatherModel.subscribe(function (weatherData) {
+            _this.currentTemp = Math.floor(_this.ConvertKelvinToFarenhite(weatherData.main.temp));
+        });
         this.loadAbout();
-        this.camoziImages = ["../assets/i4.JPG", "../assets/i5.JPG", "../assets/i6.JPG", "../assets/i7.JPG", "../assets/i8.JPG", "../assets/i9.JPG"];
-        alert(this.camoziImages[0]);
     };
     AppComponent.prototype.ConvertKelvinToFarenhite = function (params) {
         return (params - 273.15) * 1.8 + 32;
