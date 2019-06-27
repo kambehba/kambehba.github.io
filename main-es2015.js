@@ -102,7 +102,7 @@ let AppComponent = class AppComponent {
         //   this.currentTemp = Math.floor(this.ConvertKelvinToFarenhite(weatherData.main.temp));
         // });
         this.loadAbout();
-        this.camoziImages = ["../assets/i4.JPG", "../assets/i5.JPG", "../assets/i6.JPG", "../assets/i7.JPG", "../assets/i8.JPG", "../assets/i9.JPG"];
+        this.camoziImages = ["/assets/i4.JPG", "/assets/i5.JPG", "/assets/i6.JPG", "/assets/i7.JPG", "/assets/i8.JPG", "/assets/i9.JPG"];
         alert(this.camoziImages[0]);
     }
     ConvertKelvinToFarenhite(params) {
