@@ -86,21 +86,22 @@ let AppComponent = class AppComponent {
         this.siteService.GetDateTimeInfo();
     }
     ngOnInit() {
-        this.siteService.timeDateModel.subscribe(timeData => {
-            this.currentWeekDay = timeData.dayOfTheWeek;
-            this.currentMonth = this.allMonth[Number(timeData.currentDateTime.substring(5, 7))];
-            this.currentDay = timeData.currentDateTime.substring(8, 10);
-            this.currentYear = timeData.currentDateTime.substring(0, 4);
-            this.currentTime = timeData.currentDateTime.substring(11, 16);
-            this.siteService.GetWeatherInfo();
-            this.hideAllSkills();
-            this.hideAllExperinces();
-            this.currentCamozziImageIndex = 0;
-            alert(this.camoziImages[2]);
-        });
-        this.siteService.weatherModel.subscribe(weatherData => {
-            this.currentTemp = Math.floor(this.ConvertKelvinToFarenhite(weatherData.main.temp));
-        });
+        alert("00000000");
+        // this.siteService.timeDateModel.subscribe(timeData => {
+        //   this.currentWeekDay = timeData.dayOfTheWeek;
+        //   this.currentMonth = this.allMonth[Number(timeData.currentDateTime.substring(5, 7))];
+        //   this.currentDay = timeData.currentDateTime.substring(8, 10);
+        //   this.currentYear = timeData.currentDateTime.substring(0, 4);
+        //   this.currentTime = timeData.currentDateTime.substring(11, 16);
+        //   this.siteService.GetWeatherInfo();
+        //   this.hideAllSkills();
+        //   this.hideAllExperinces();
+        //   this.currentCamozziImageIndex = 0;
+        //   alert(this.camoziImages[2]);
+        // });
+        // this.siteService.weatherModel.subscribe(weatherData => {
+        //   this.currentTemp = Math.floor(this.ConvertKelvinToFarenhite(weatherData.main.temp));
+        // });
         this.loadAbout();
     }
     ConvertKelvinToFarenhite(params) {
