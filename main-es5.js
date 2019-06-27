@@ -89,7 +89,8 @@ var AppComponent = /** @class */ (function () {
         this.siteService.GetDateTimeInfo();
     }
     AppComponent.prototype.ngOnInit = function () {
-        alert("00000000");
+        this.camozziImage = this.camoziImages[0];
+        alert(this.camozziImage);
         // this.siteService.timeDateModel.subscribe(timeData => {
         //   this.currentWeekDay = timeData.dayOfTheWeek;
         //   this.currentMonth = this.allMonth[Number(timeData.currentDateTime.substring(5, 7))];
@@ -106,7 +107,7 @@ var AppComponent = /** @class */ (function () {
         //   this.currentTemp = Math.floor(this.ConvertKelvinToFarenhite(weatherData.main.temp));
         // });
         this.loadAbout();
-        this.camoziImages = ["/assets/i4.JPG", "/assets/i5.JPG", "/assets/i6.JPG", "/assets/i7.JPG", "/assets/i8.JPG", "/assets/i9.JPG"];
+        this.camoziImages = ["../assets/i4.JPG", "../assets/i5.JPG", "../assets/i6.JPG", "../assets/i7.JPG", "../assets/i8.JPG", "../assets/i9.JPG"];
         alert(this.camoziImages[0]);
     };
     AppComponent.prototype.ConvertKelvinToFarenhite = function (params) {
