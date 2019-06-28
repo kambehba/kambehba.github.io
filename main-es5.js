@@ -85,7 +85,7 @@ var AppComponent = /** @class */ (function () {
     function AppComponent(siteService) {
         this.siteService = siteService;
         this.title = 'kamparsen-site';
-        this.camoziImages = ["../assets/i4.JPG", "../assets/i5.JPG", "../assets/i6.JPG", "../assets/i7.JPG", "../assets/i8.JPG", "../assets/i9.JPG"];
+        this.camoziImages = ["/assets/i4.JPG", "/assets/i5.JPG", "/assets/i6.JPG", "/assets/i7.JPG", "/assets/i8.JPG", "/assets/i9.JPG"];
         this.espnImages = ["../assets/i11.png", "../assets/i12.png"];
         this.novaImages = ["../assets/1.jpg", "../assets/2.jpg", "../assets/3.jpg"];
         this.allMonth = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
