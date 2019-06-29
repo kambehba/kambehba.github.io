@@ -101,6 +101,7 @@ var AppComponent = /** @class */ (function () {
         var _this = this;
         // });
         this.currentDate = new Date().toDateString();
+        alert(this.currentDate);
         this.siteService.GetWeatherInfo();
         this.hideAllSkills();
         this.hideAllExperinces();

@@ -96,6 +96,7 @@ let AppComponent = class AppComponent {
         //   this.currentTime = timeData.currentDateTime.substring(11, 16);
         // });
         this.currentDate = new Date().toDateString();
+        alert(this.currentDate);
         this.siteService.GetWeatherInfo();
         this.hideAllSkills();
         this.hideAllExperinces();
