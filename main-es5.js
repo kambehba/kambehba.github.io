@@ -291,6 +291,7 @@ var AppComponent = /** @class */ (function () {
         this.show2002 = false;
         this.show2008 = false;
         this.show2010 = false;
+        this.show2013 = false;
     };
     AppComponent.prototype.hideAllSkills = function () {
         this.showDesktopSkills = false;

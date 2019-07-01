@@ -286,6 +286,7 @@ let AppComponent = class AppComponent {
         this.show2002 = false;
         this.show2008 = false;
         this.show2010 = false;
+        this.show2013 = false;
     }
     hideAllSkills() {
         this.showDesktopSkills = false;
