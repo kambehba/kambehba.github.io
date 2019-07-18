@@ -89,7 +89,7 @@ var AppComponent = /** @class */ (function () {
         this.camoziImages = ["../assets/i4.JPG", "../assets/i5.JPG", "../assets/i6.JPG", "../assets/i7.JPG", "../assets/i8.JPG", "../assets/i9.JPG"];
         this.espnImages = ["../assets/i11.PNG", "../assets/i12.PNG"];
         this.raytheonImages = ["../assets/sigma.JPG", "../assets/i10.JPG"];
-        this.novaImages = ["../assets/nova.PNG", "../assets/1.JPG", "../assets/2.JPG", "../assets/3.JPG"];
+        this.novaImages = ["../assets/nova.PNG", "../assets/1.JPG", "../assets/2.JPG", "../assets/3.JPG", "../assets/cfft-1.PNG", "../assets/cfft-2.PNG", "../assets/cfft-3.PNG"];
         this.interestImages = ["../assets/i20.JPG", "../assets/i21.JPG", "../assets/i22.JPG", "../assets/i23.JPG"];
         this.allMonth = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
     }
@@ -210,7 +210,7 @@ var AppComponent = /** @class */ (function () {
         }
         if (this.show2013) {
             this.currentNovaImageIndex++;
-            if (this.currentNovaImageIndex > 2)
+            if (this.currentNovaImageIndex > 7)
                 this.currentNovaImageIndex = 0;
             this.novaImage = this.novaImages[this.currentNovaImageIndex];
         }
